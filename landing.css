@@ -1,7 +1,7 @@
 /* Diction landing page. Paper, serif and verdigris from the app; the phone
    carries the only motion on the page. */
 :root{
-  --page:#F6F2EA; --card:#FBF8F2; --ink:#1D1B19; --ink2:#544A3C; --ink3:#8B7D69;
+  --page:#F8EFE3; --card:#FBF8F2; --ink:#1D1B19; --ink2:#544A3C; --ink3:#8B7D69;
   --gold:#AF874A; --verd:#3C7669; --line:#E2D9C8; --night:#0F0E0D;
   --serif:"Newsreader","New York","Iowan Old Style",Georgia,serif;
   --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -32,7 +32,9 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 
 /* the phone */
 .device-wrap{position:relative;display:flex;justify-content:center;padding:0}
-.mockup{width:min(560px,100%,calc(88vh * 1100 / 1473));height:auto;mix-blend-mode:multiply}
+.mockup{width:min(560px,100%,calc(88vh * 1100 / 1473));height:auto;mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,#000 88%,transparent);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent),linear-gradient(to bottom,#000 88%,transparent);mask-composite:intersect}
 .glow{position:absolute;inset:10% 15%;background:radial-gradient(closest-side,rgba(175,135,74,.28),rgba(175,135,74,0));filter:blur(30px);pointer-events:none}
 .device{position:relative;width:min(330px,78vw,calc(76vh * 1320 / 2868));aspect-ratio:1320/2868;background:#101010;border-radius:54px;padding:12px;
   box-shadow:0 40px 90px -30px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.6),inset 0 0 0 2px #2a2a2a;
