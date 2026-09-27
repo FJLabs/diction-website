@@ -9,7 +9,7 @@
 body{margin:0;background:var(--page);color:var(--ink);
   font-family:var(--serif);font-size:17px;line-height:1.62}
 .wrap{max-width:640px;margin:0 auto;padding-inline:20px;padding-block:56px 80px}
-.mark{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.3em;
+.mark{font-family:var(--sans);font-size:18px;font-weight:600;letter-spacing:.3em;
   color:var(--ink);text-decoration:none;display:block;margin-bottom:34px}
 h1{font-size:34px;line-height:1.15;font-weight:600;margin:0 0 6px}
 h2{font-size:19px;font-weight:600;margin:38px 0 8px}

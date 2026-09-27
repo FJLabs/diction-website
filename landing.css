@@ -17,7 +17,7 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;padding:22px var(--gutter);max-width:1240px;margin:0 auto}
-.mark{font-size:13px;font-weight:600;letter-spacing:.34em;color:var(--ink);text-decoration:none}
+.mark{font-family:var(--sans);font-size:20px;font-weight:600;letter-spacing:.36em;padding-left:.36em;color:var(--ink);text-decoration:none}
 .store img{width:165px;height:auto;transition:transform .2s ease}
 .store:hover img{transform:translateY(-1px)}
 .store-sm img{width:120px}
@@ -33,11 +33,11 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 /* the phone */
 .device-wrap{position:relative;display:flex;justify-content:center;padding:24px 0}
 .glow{position:absolute;inset:10% 15%;background:radial-gradient(closest-side,rgba(175,135,74,.28),rgba(175,135,74,0));filter:blur(30px);pointer-events:none}
-.device{position:relative;width:min(330px,78vw,calc(76vh * 716 / 1556));aspect-ratio:716/1556;background:#101010;border-radius:54px;padding:12px;
+.device{position:relative;width:min(330px,78vw,calc(76vh * 1320 / 2868));aspect-ratio:1320/2868;background:#101010;border-radius:54px;padding:12px;
   box-shadow:0 40px 90px -30px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.6),inset 0 0 0 2px #2a2a2a;
   animation:float 7s ease-in-out infinite}
 .screen{position:relative;width:100%;height:100%;border-radius:44px;overflow:hidden;background:var(--night)}
-.screen video{width:100%;height:100%;object-fit:cover}
+.screen video{width:100%;height:100%;object-fit:cover;background:var(--page)}
 .island{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:34%;height:30px;background:#000;border-radius:999px}
 .caption{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;align-items:center;
   padding:16% 26px 24%;text-align:center;pointer-events:none;font-family:var(--serif)}
@@ -51,15 +51,6 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
   display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);border-top:1px solid var(--line);padding-top:clamp(40px,5vw,64px)}
 .pillars h2{font-size:24px;margin-bottom:10px}
 .pillars p{margin:0;color:var(--ink2);font-size:16px;max-width:36ch}
-
-/* themes */
-.themes{max-width:1240px;margin:clamp(80px,10vw,150px) auto 0;padding:0 var(--gutter);
-  display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.device-still{animation:none;justify-self:center;width:min(320px,78vw);transform:rotate(1.2deg)}
-.device-still .screen img{width:100%;height:100%;object-fit:cover;object-position:top}
-.themes h2{font-size:clamp(32px,4vw,48px);line-height:1.1;margin-bottom:18px}
-.themes p{color:var(--ink2);font-family:var(--serif);font-size:19px;line-height:1.55;max-width:44ch;margin:0 0 16px}
-.themes .small{font-family:var(--sans);font-size:14px;color:var(--ink3)}
 
 /* closing */
 .close{text-align:center;margin:clamp(90px,12vw,170px) auto 0;padding:0 var(--gutter);display:flex;flex-direction:column;align-items:center;gap:30px}
@@ -78,7 +69,6 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
   .lede{margin-inline:auto}
   .device-wrap{order:1}
   .pillars{grid-template-columns:1fr}
-  .themes{grid-template-columns:1fr}
   .store-sm{display:none}
 }
 @media (prefers-reduced-motion:reduce){
