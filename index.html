@@ -4,71 +4,98 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Diction: Word of the Day</title>
-<meta name="description" content="One beautiful word a day on your Home Screen. Feel smarter. Speak better.">
+<meta name="description" content="One beautiful word a day on your Home Screen. Feel smarter. Speak better. Diction for iPhone.">
+<meta property="og:title" content="Diction: Word of the Day">
+<meta property="og:description" content="One beautiful word a day on your Home Screen. Feel smarter. Speak better.">
+<meta property="og:image" content="https://trydiction.com/img/widgets.jpg">
+<meta property="og:url" content="https://trydiction.com/">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<div class="wrap wide">
-<nav>
-  <a class="mark" href="./">DICTION</a>
-  <div class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-</nav>
 
+<header class="top">
+  <a class="mark" href="./" aria-label="Diction home">DICTION</a>
+  <a class="store store-sm" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
+    <img src="img/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
+  </a>
+</header>
+
+<main>
 <section class="hero">
-  <div>
+  <div class="hero-copy">
     <p class="eyebrow">Word of the Day for iPhone</p>
     <h1>Feel smarter.<br><em>Speak better.</em></h1>
-    <p>One beautiful word a day, on the best-looking widget on your Home Screen. Its meaning, where it came from, and how to use it today. No feeds, no games, no noise.</p>
-    <a class="cta soon" href="#" aria-disabled="true">Coming soon to the App Store</a>
+    <p class="lede">One beautiful word a day, on the best-looking widget on your Home Screen. Its meaning, where it came from, and how to use it today.</p>
+    <a class="store" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
+      <img src="img/app-store-badge.svg" alt="Download on the App Store" width="165" height="55">
+    </a>
+    <p class="fine">Free, with Diction Pro as an optional upgrade. No account. No ads.</p>
   </div>
-  <img src="img/phone.jpg" alt="An iPhone showing four Diction widgets: fortitude, tenacity, halcyon and solace, each on its own classical theme" width="1200" height="1607">
+
+  <div class="device-wrap">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="device" role="img" aria-label="Diction's opening screen: a marble statue turning towards you in a shaft of light, with a quote about language and the word DICTION">
+      <div class="screen">
+        <video autoplay muted loop playsinline poster="img/intro-poster.jpg" preload="metadata">
+          <source src="img/intro.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <p class="quote">“Every word is a bird we teach to sing.”<br><span>- Daniel Tammet</span></p>
+          <p class="wordmark">DICTION</p>
+        </div>
+      </div>
+      <div class="island" aria-hidden="true"></div>
+    </div>
+  </div>
 </section>
 
-<section class="features">
-  <div><h3>On your Home Screen</h3><p>Small, medium and large widgets, and a Lock Screen one. The word is there every time you pick up your phone.</p></div>
-  <div><h3>Every word, properly</h3><p>A definition you can remember, a real sentence, the word's origin, and similar words so you choose the right one.</p></div>
-  <div><h3>Private by design</h3><p>No account. No ads. Works offline. Every word ships inside the app.</p></div>
-</section>
-
-<section class="shots">
-  <img src="img/widgets.jpg" alt="Diction widgets in four themes" width="900" height="1509">
+<section class="pillars" aria-label="What Diction does">
   <div>
+    <h2>On your Home Screen</h2>
+    <p>Small, medium and large widgets, and a Lock Screen one. The word is there every time you pick up your phone. No opening required.</p>
+  </div>
+  <div>
+    <h2>Every word, properly</h2>
+    <p>A definition you can remember, a real sentence, the word's origin, and similar words so you can choose the right one.</p>
+  </div>
+  <div>
+    <h2>Words that stick</h2>
+    <p>Active Recall asks for yesterday's word, then the ones from three and seven days ago. Each comes back just as it starts to fade.</p>
+  </div>
+</section>
+
+<section class="themes">
+  <img src="img/widgets.jpg" alt="Four Diction widgets on a phone: fortitude, tenacity, halcyon and solace, each on a classical marble or fresco theme" width="900" height="1509" loading="lazy">
+  <div class="themes-copy">
     <p class="eyebrow">Eighteen themes</p>
     <h2>Marble, fresco and candlelight</h2>
     <p>Two themes are free for ever. Diction Pro opens the rest, from marble emblems to the Pantheon's light, so the word looks the way you want it to.</p>
+    <p class="small">Diction Pro: every theme, Active Recall, favourites and lists, the full archive. Yearly with a 7-day free trial, or monthly.</p>
   </div>
 </section>
 
-<section class="shots flip">
-  <div>
-    <p class="eyebrow">Active Recall</p>
-    <h2>Three questions a day, so words stick</h2>
-    <p>Diction asks for yesterday's word, then the ones from three and seven days ago. Each comes back just as it starts to fade, which is what makes it stay.</p>
-  </div>
-  <img src="img/recall.jpg" alt="Active Recall in Diction, guessing the word for a definition" width="900" height="1509">
+<section class="close">
+  <h2>One word a day.<br>A sharper you by Friday.</h2>
+  <a class="store" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
+    <img src="img/app-store-badge.svg" alt="Download on the App Store" width="165" height="55">
+  </a>
 </section>
-
-<section class="pro">
-  <p class="eyebrow">Diction Pro</p>
-  <h2 style="margin:0">Everything, unlocked</h2>
-  <ul>
-    <li>Eighteen widget themes</li>
-    <li>Active Recall, three words a day</li>
-    <li>Favourites and your own lists</li>
-    <li>Search the whole dictionary</li>
-    <li>The full archive of every word</li>
-    <li>Supports an independent, ad-free app</li>
-  </ul>
-  <p style="margin-top:18px">Yearly with a 7-day free trial, or monthly. Cancel any time in your Apple Account settings.</p>
-</section>
+</main>
 
 <footer class="foot">
   <span>Diction · made in the UK by FJ Labs</span>
-  <span><a href="mailto:support.diction.app@gmail.com">support.diction.app@gmail.com</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  <nav aria-label="Legal and support">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:support.diction.app@gmail.com">support.diction.app@gmail.com</a>
+  </nav>
 </footer>
-</div>
+
 </body>
 </html>
