@@ -55,7 +55,8 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 /* themes */
 .themes{max-width:1240px;margin:clamp(80px,10vw,150px) auto 0;padding:0 var(--gutter);
   display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.themes img{border-radius:28px;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.device-still{animation:none;justify-self:center;width:min(320px,78vw);transform:rotate(1.2deg)}
+.device-still .screen img{width:100%;height:100%;object-fit:cover;object-position:top}
 .themes h2{font-size:clamp(32px,4vw,48px);line-height:1.1;margin-bottom:18px}
 .themes p{color:var(--ink2);font-family:var(--serif);font-size:19px;line-height:1.55;max-width:44ch;margin:0 0 16px}
 .themes .small{font-family:var(--sans);font-size:14px;color:var(--ink3)}
@@ -78,7 +79,6 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
   .device-wrap{order:1}
   .pillars{grid-template-columns:1fr}
   .themes{grid-template-columns:1fr}
-  .themes img{max-width:420px;margin:0 auto}
   .store-sm{display:none}
 }
 @media (prefers-reduced-motion:reduce){
