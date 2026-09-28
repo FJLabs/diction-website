@@ -30,16 +30,16 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 .lede{font-family:var(--serif);font-size:clamp(16px,1.5vw,18px);line-height:1.5;color:var(--ink2);max-width:40ch;margin:0 0 30px}
 .fine{font-size:13px;color:var(--ink3);margin:16px 0 0}
 
-/* the phone: a keyed Higgsfield render of the frame, with the real welcome
-   recording projected onto its screen and a CSS shadow beneath */
+/* the phone: a keyed Higgsfield front render, the real welcome recording
+   sitting in its screen, a CSS shadow beneath */
 .device-wrap{position:relative;display:flex;justify-content:center;padding:0}
-.render{position:relative;width:min(440px,100%,calc(74vh * 1165 / 2025));aspect-ratio:1165/2025}
+.render{position:relative;width:min(380px,100%,calc(76vh * 1050 / 2247));aspect-ratio:1050/2247}
 .render-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
-.render-screen{position:absolute;left:0;top:0;width:588px;height:1280px;transform-origin:0 0;
-  transform:scale(calc(var(--k, 1))) matrix3d(1.078839,-0.085072,0.000000,-0.000034,-0.285265,1.375460,0.000000,-0.000032,0.000000,0.000000,1.000000,0.000000,404.397000,90.395000,0.000000,1.000000);z-index:1;overflow:hidden;background:#F6F2EA}
+.render-screen{position:absolute;left:4.762%;top:1.914%;width:90.571%;height:96.173%;
+  border-radius:12% / 5.5%;overflow:hidden;background:#F6F2EA;z-index:1}
 .render-screen video{width:100%;height:100%;object-fit:cover;display:block}
-.render-shadow{position:absolute;left:8%;right:4%;top:6%;bottom:0;border-radius:40% / 8%;
-  background:rgba(35,26,18,.42);filter:blur(34px);transform:translate(4%,4%) skewX(-8deg);z-index:0}
+.render-shadow{position:absolute;left:6%;right:6%;bottom:-2%;height:12%;border-radius:50%;
+  background:rgba(35,26,18,.38);filter:blur(28px);z-index:0}
 
 /* pillars */
 .pillars{max-width:1240px;margin:clamp(72px,10vw,140px) auto 0;padding:0 var(--gutter);
