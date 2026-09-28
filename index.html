@@ -37,14 +37,15 @@
   </div>
 
   <div class="device-wrap">
-    <div class="device" role="img" aria-label="Diction's welcome screen: the word DICTION above three rows of widgets drifting past, each word on its own classical theme">
-      <div class="screen">
+    <div class="render" role="img" aria-label="An iPhone leaning back, showing Diction's welcome screen: the DICTION wordmark above three rows of widgets drifting past on classical themes">
+      <div class="render-shadow" aria-hidden="true"></div>
+      <div class="render-screen">
         <video autoplay muted loop playsinline poster="img/welcome-poster.jpg" preload="metadata">
           <source src="img/welcome.mp4" type="video/mp4">
         </video>
       </div>
+      <img class="render-frame" src="img/phone-frame.png" alt="" width="1165" height="2025" fetchpriority="high">
     </div>
-    <div class="ground" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -85,5 +86,8 @@
   </nav>
 </footer>
 
+<script>
+(function(){var r=document.querySelector('.render');function fit(){r.style.setProperty('--k',r.getBoundingClientRect().width/1165);}fit();addEventListener('resize',fit);})();
+</script>
 </body>
 </html>
