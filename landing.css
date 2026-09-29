@@ -61,9 +61,9 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;min-height:0;text-align:center;padding-top:16px}
-  .hero-copy{display:flex;flex-direction:column;align-items:center;order:2}
+  .hero-copy{display:flex;flex-direction:column;align-items:center;order:1}
   .lede{margin-inline:auto}
-  .device-wrap{order:1}
+  .device-wrap{order:2;margin-top:40px}
   .pillars{grid-template-columns:1fr}
   .store-sm{display:none}
 }
