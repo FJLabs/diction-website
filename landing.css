@@ -33,8 +33,8 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 /* the phone: a keyed Higgsfield front render, the real welcome recording
    sitting in its screen, a CSS shadow beneath */
 .device-wrap{position:relative;display:flex;justify-content:center;padding:0}
-.render{position:relative;width:min(380px,100%,calc(76vh * 1050 / 2247));aspect-ratio:1050/2247}
-.render-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.render{position:relative;width:min(380px,100%,calc(76vh * 1050 / 2247));aspect-ratio:1050/2247;height:auto;flex:none}
+.render-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;pointer-events:none}
 .render-screen{position:absolute;left:4.762%;top:1.914%;width:90.571%;height:96.173%;
   border-radius:12% / 5.5%;overflow:hidden;background:#F6F2EA;z-index:1}
 .render-screen video{width:100%;height:100%;object-fit:cover;display:block}
@@ -61,9 +61,11 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;min-height:0;text-align:center;padding-top:16px}
+  .top{flex-direction:column;gap:14px}
   .hero-copy{display:flex;flex-direction:column;align-items:center;order:1}
   .lede{margin-inline:auto}
   .device-wrap{order:2;margin-top:40px}
+  .render{width:min(300px,82vw)}
   .pillars{grid-template-columns:1fr}
   .store-sm{display:none}
 }
