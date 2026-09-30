@@ -1,7 +1,7 @@
 /* Diction landing page. Paper, serif and verdigris from the app; the phone
    carries the only motion on the page. */
 :root{
-  --page:#F8EFE3; --card:#FBF8F2; --ink:#1D1B19; --ink2:#544A3C; --ink3:#8B7D69;
+  --page:#F7F2EA; --card:#FBF8F2; --ink:#1D1B19; --ink2:#544A3C; --ink3:#8B7D69;
   --gold:#AF874A; --verd:#3C7669; --line:#E2D9C8; --night:#0F0E0D;
   --serif:"Newsreader","New York","Iowan Old Style",Georgia,serif;
   --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -36,7 +36,7 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 .render{position:relative;width:min(380px,100%,calc(76vh * 1050 / 2247));aspect-ratio:1050/2247;height:auto;flex:none}
 .render-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;pointer-events:none}
 .render-screen{position:absolute;left:4.762%;top:1.914%;width:90.571%;height:96.173%;
-  border-radius:12% / 5.5%;overflow:hidden;background:#F6F2EA;z-index:1}
+  border-radius:12% / 5.5%;overflow:hidden;background:#F7F2EA;z-index:1}
 .render-screen video{width:100%;height:100%;object-fit:cover;display:block}
 .render-shadow{position:absolute;left:6%;right:6%;bottom:-2%;height:12%;border-radius:50%;
   background:rgba(35,26,18,.38);filter:blur(28px);z-index:0}
