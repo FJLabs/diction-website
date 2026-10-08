@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Diction: Word of the Day</title>
-<meta name="description" content="One beautiful word a day on your Home Screen. Get smarter, speak better. Diction for iPhone.">
+<meta name="description" content="One beautiful word a day on your Home Screen. Get smarter, speak better. Join the Diction beta for iPhone.">
 <meta property="og:title" content="Diction: Word of the Day">
 <meta property="og:description" content="One beautiful word a day on your Home Screen. Get smarter, speak better.">
 <meta property="og:image" content="https://trydiction.com/img/home.jpg">
@@ -20,20 +20,24 @@
 
 <header class="top">
   <a class="mark" href="https://trydiction.com/" aria-label="Diction home">DICTION</a>
-  <a class="store store-sm" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
-    <img src="img/app-store-badge.svg" alt="Download on the App Store" width="120" height="40">
-  </a>
+  <a class="beta-link" href="#join">Join the beta</a>
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" id="join">
   <div class="hero-copy">
-    <p class="eyebrow">Word of the Day for iPhone</p>
+    <p class="eyebrow">Word of the Day for iPhone · Beta coming soon</p>
     <h1>Get Smarter,<br><em>Speak Better.</em></h1>
     <p class="lede">One beautiful word a day, on the best-looking widget on your Home Screen. With active recall, spaced repetition and streaks to upgrade your vocabulary, faster.</p>
-    <a class="store" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
-      <img src="img/app-store-badge.svg" alt="Download on the App Store" width="165" height="55">
-    </a>
+    <form class="waitlist" action="#" novalidate>
+      <label class="sr" for="email-hero">Email address</label>
+      <div class="waitlist-row">
+        <input id="email-hero" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button type="submit">Join the beta</button>
+      </div>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="waitlist-msg" role="status" aria-live="polite">Be first to try Diction. No spam, just one email when the beta opens.</p>
+    </form>
   </div>
 
   <div class="device-wrap">
@@ -70,9 +74,15 @@
 
 <section class="close">
   <h2>One Word A Day.<br>Become The Most Articulate You.</h2>
-  <a class="store" href="https://apps.apple.com/app/id6788556507" aria-label="Download on the App Store">
-    <img src="img/app-store-badge.svg" alt="Download on the App Store" width="165" height="55">
-  </a>
+  <form class="waitlist" action="#" novalidate>
+      <label class="sr" for="email-close">Email address</label>
+      <div class="waitlist-row">
+        <input id="email-close" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button type="submit">Join the beta</button>
+      </div>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="waitlist-msg" role="status" aria-live="polite">Join the beta waitlist for early access.</p>
+    </form>
 </section>
 </main>
 
@@ -85,6 +95,8 @@
     <a href="mailto:support.diction.app@gmail.com">support.diction.app@gmail.com</a>
   </nav>
 </footer>
+
+<script src="waitlist.js" defer></script>
 
 </body>
 </html>

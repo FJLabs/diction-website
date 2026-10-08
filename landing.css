@@ -18,9 +18,23 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;padding:22px var(--gutter);max-width:1240px;margin:0 auto}
 .mark{font-family:var(--sans);font-size:20px;font-weight:600;letter-spacing:.36em;padding-left:.36em;color:var(--ink);text-decoration:none}
-.store img{width:165px;height:auto;transition:transform .2s ease}
-.store:hover img{transform:translateY(-1px)}
-.store-sm img{width:120px}
+.beta-link{font-size:14px;font-weight:600;color:var(--verd);text-decoration:none;border:1px solid var(--verd);border-radius:999px;padding:8px 16px;transition:background .2s,color .2s}
+.beta-link:hover{background:var(--verd);color:var(--card)}
+
+/* beta waitlist */
+.waitlist{width:100%;max-width:440px}
+.waitlist-row{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px;box-shadow:0 1px 2px rgba(35,26,18,.05)}
+.waitlist-row:focus-within{border-color:var(--verd)}
+.waitlist input[type=email]{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;color:var(--ink);padding:10px 14px;outline:none}
+.waitlist input::placeholder{color:var(--ink3)}
+.waitlist button{flex:none;border:0;border-radius:999px;background:var(--verd);color:#fff;font:inherit;font-size:15px;font-weight:600;padding:10px 20px;cursor:pointer;transition:background .2s}
+.waitlist button:hover{background:#2F5F54}
+.waitlist button:disabled{opacity:.6;cursor:default}
+.waitlist-msg{font-size:13px;color:var(--ink3);margin:12px 4px 0;min-height:1.3em}
+.waitlist.done .waitlist-row{display:none}
+.waitlist.done .waitlist-msg{font-family:var(--serif);font-size:18px;color:var(--verd);margin-top:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* hero */
 .hero{max-width:1240px;margin:0 auto;padding:clamp(8px,3vw,40px) var(--gutter) 0;
@@ -68,7 +82,12 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
   .device-wrap{order:2;margin-top:40px}
   .render{width:min(300px,82vw)}
   .pillars{grid-template-columns:1fr}
-  .store-sm{display:none}
+  .waitlist-msg{text-align:center}
+  .beta-link{display:none}
+}
+@media (max-width:420px){
+  .waitlist-row{flex-direction:column;border-radius:18px}
+  .waitlist button{padding:12px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
