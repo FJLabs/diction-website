@@ -1,6 +1,7 @@
-// Beta waitlist: posts the email to the Google Apps Script web app, which
-// writes a timestamped row to the waitlist Sheet (see apps-script/waitlist.gs).
-const WAITLIST_ENDPOINT = '';
+// Beta waitlist: posts the email to the "Diction beta" Google Form, which
+// timestamps each response and collects them in its linked Sheet.
+const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfk1JtMhb2zG_3hzbGr108RqvdpNlmup1oTCW4eHOXoCKbFfg/formResponse';
+const EMAIL_FIELD = 'entry.956964409';
 
 document.querySelectorAll('.waitlist').forEach(form => {
   const msg = form.querySelector('.waitlist-msg');
@@ -12,20 +13,19 @@ document.querySelectorAll('.waitlist').forEach(form => {
       msg.textContent = 'Please enter a valid email address.';
       return;
     }
+    if (form.website.value) return; // honeypot: bots fill the hidden field
     btn.disabled = true;
     msg.textContent = 'Joining…';
     try {
-      if (!WAITLIST_ENDPOINT) throw new Error('no endpoint');
-      const res = await fetch(WAITLIST_ENDPOINT, {
+      // Google Forms sends no CORS headers, so the response is opaque;
+      // a network failure still throws and is reported below.
+      await fetch(FORM_URL, {
         method: 'POST',
-        body: new URLSearchParams({ email, website: form.website.value })
+        mode: 'no-cors',
+        body: new URLSearchParams({ [EMAIL_FIELD]: email })
       });
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error);
       form.classList.add('done');
-      msg.textContent = data.duplicate
-        ? "You're already on the list. We'll be in touch."
-        : "You're on the list. We'll email you when the beta opens.";
+      msg.textContent = "You're on the list. We'll email you when the beta opens.";
     } catch (err) {
       btn.disabled = false;
       msg.textContent = 'Something went wrong. Please try again.';
