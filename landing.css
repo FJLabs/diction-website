@@ -13,7 +13,11 @@ body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);fo
 img,video{max-width:100%;display:block}
 a{color:inherit}
 h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.badge{display:inline-flex;align-items:center;gap:8px;margin:0 0 24px;padding:5px 12px 5px 10px;border-radius:999px;
+  background:rgba(60,118,105,.1);color:var(--verd);font-size:13px;font-weight:600;line-height:1.3}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--verd);box-shadow:0 0 0 0 rgba(60,118,105,.45);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(60,118,105,.45)}70%,100%{box-shadow:0 0 0 7px rgba(60,118,105,0)}}
 
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;padding:22px var(--gutter);max-width:1240px;margin:0 auto}
@@ -40,10 +44,13 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
 
 /* hero */
 .hero{max-width:1240px;margin:0 auto;padding:clamp(8px,3vw,40px) var(--gutter) 0;
-  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,80px);align-items:center;min-height:min(84vh,820px)}
+  display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:auto auto;column-gap:clamp(32px,6vw,80px);row-gap:0;min-height:min(84vh,820px)}
+.hero-copy{grid-column:1;grid-row:1;align-self:end}
+.hero-cta{grid-column:1;grid-row:2;align-self:start;scroll-margin-top:24px}
+.device-wrap{grid-column:2;grid-row:1 / span 2;align-self:center}
 .hero h1{font-size:clamp(46px,7vw,84px);line-height:1;margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--verd)}
-.lede{font-family:var(--serif);font-size:clamp(16px,1.5vw,18px);line-height:1.5;color:var(--ink2);max-width:40ch;margin:0 0 30px}
+.lede{font-family:var(--serif);font-size:clamp(16px,1.5vw,18px);line-height:1.5;color:var(--ink2);max-width:40ch;margin:0 0 32px}
 .fine{font-size:13px;color:var(--ink3);margin:16px 0 0}
 
 /* the phone: a keyed Higgsfield front render, the real welcome recording
@@ -79,17 +86,19 @@ h1,h2{font-family:var(--serif);font-weight:600;margin:0;text-wrap:balance;letter
   .hero{grid-template-columns:1fr;min-height:0;text-align:center;padding-top:16px}
   .top{flex-direction:column;justify-content:center;align-items:center;gap:14px;text-align:center}
   .mark{padding-left:.36em}
-  .hero-copy{display:flex;flex-direction:column;align-items:center;order:1}
-  .lede{margin-inline:auto}
-  .device-wrap{order:2;margin-top:40px}
+  .hero-copy,.hero-cta,.device-wrap{grid-column:1;grid-row:auto;align-self:auto}
+  .hero-copy{display:flex;flex-direction:column;align-items:center}
+  .lede{margin:0 auto}
+  .device-wrap{order:2;margin-top:44px}
+  .hero-cta{order:3;display:flex;justify-content:center;margin-top:56px}
   .render{width:min(300px,82vw)}
   .pillars{grid-template-columns:1fr}
   .waitlist-msg{text-align:center}
-  .beta-link{display:none}
 }
 @media (max-width:420px){
   .waitlist-row{flex-direction:column}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
+  .badge-dot{animation:none}
 }
